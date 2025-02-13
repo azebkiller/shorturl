@@ -9,11 +9,14 @@ let urlsData = JSON.parse(localStorage.getItem("urlsData")) || [];
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    if (!shortUrlInput.value || !shortUrlInput.value.startsWith('https://')) {
+    if (!shortUrlInput.value) {
+        errorFunction("Enter an URL");
+        return;
+    }
+    if (!shortUrlInput.value.startsWith('https://')) {
         errorFunction("Enter a valid URL");
         return;
     }
-
     try {
         const apiUrl = `https://tinyurl.com/api-create.php?url=${encodeURIComponent(shortUrlInput.value)}`;
         const response = await fetch(apiUrl);
