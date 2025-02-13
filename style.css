@@ -229,4 +229,7 @@ button:hover {
         width: 100%;
         height:100%;
     }
+    .lists li a:focus::after {
+    width: 100%;
+}
 }
