@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family:"Builder Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     background-color: #181c20;
     display: flex;
@@ -100,4 +100,132 @@ button:hover {
     border-radius: 5px;
     margin-top: 10px;
     text-align: center;
+}
+ */
+body {
+    font-family: "Builder Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: #181c20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form {
+    background: #262a2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.main input {
+    height: 20%;
+    width: 100%;
+    border: 1px solid #dae0e7;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffff;
+    background: #212127;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lists ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.lists li {
+    background: #212529;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.lists li a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+.lists li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #ababab;
+    transition: width 0.3s ease-in-out;
+}
+
+.lists li a:hover::after {
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message, .done-message {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error-message {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.done-message {
+    background-color: #28a745;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+        display: block;
+    }
+
+    form {
+        width: 100%;
+    }
 }
