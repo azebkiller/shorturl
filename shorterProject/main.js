@@ -10,7 +10,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     if (!shortUrlInput.value || !shortUrlInput.value.startsWith('https://')) {
-        errorFunction("Enter a valid URL");
+        errorFunction("ادخل رابط من فضلك");
         return;
     }
 
